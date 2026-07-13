@@ -1,0 +1,2 @@
+/* Gallery page tweaks live mostly in pages.css (.gallery-grid) */
+.gallery-hero-note { max-width: 60ch; color: var(--pine-dim); }

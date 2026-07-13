@@ -1,0 +1,36 @@
+/* Events-specific layout */
+.events-list {
+  display: grid;
+  gap: 1.2rem;
+}
+.event-row {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 1.6rem;
+  align-items: center;
+  padding: 1.6rem;
+}
+.event-row__date {
+  text-align: center;
+  font-family: var(--font-mono);
+}
+.event-row__date .day {
+  font-size: 1.8rem;
+  color: var(--pine);
+  display: block;
+  line-height: 1;
+}
+.event-row__date .month {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--pine-dim);
+}
+@media (max-width: 700px) {
+  .event-row {
+    grid-template-columns: 60px 1fr;
+  }
+  .event-row__cta {
+    grid-column: 1/-1;
+    margin-top: 0.6rem;
+  }
+}

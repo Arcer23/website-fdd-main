@@ -1,0 +1,31 @@
+/* Programs-specific layout: detail hero split + schedule table */
+.program-detail__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.schedule-table th,
+.schedule-table td {
+  text-align: left;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+.schedule-table th {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pine-dim);
+}
+@media (max-width: 860px) {
+  .program-detail__grid {
+    grid-template-columns: 1fr;
+  }
+}

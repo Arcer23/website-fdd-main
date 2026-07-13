@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Tools — Meridian Wellness</title>
+<meta name="description" content="Free BMI and daily calorie calculators from Meridian Wellness.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/pages.css">
+
+</head>
+<body>
+
+<header class="navbar">
+  <div class="wrap navbar__inner">
+    <a href="index.html" class="navbar__brand">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 16H9L12 6L18 26L21 16H30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Meridian
+    </a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="services.html">Services</a>
+      <a href="events.html">Events</a>
+      <a href="resources.html">Resources</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary">Book a session</a>
+      <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('is-open')">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 4h16M1 9h16M1 14h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="programs.html">Programs</a><span>/</span><span aria-current="page">Health Tools</span></div>
+    <p class="eyebrow">Free tools</p>
+    <h1 class="page-hero__title">Set a baseline before you start.</h1>
+    <p class="page-hero__lead">Two quick calculators — useful context for your first intake, not a diagnosis. For anything more, that's what our <a href="services.html" style="color:var(--pine); font-weight:600;">clinical team</a> is for.</p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <div class="tool-tabs reveal">
+      <button class="tool-tab is-active" data-panel="bmiPanel">BMI Calculator</button>
+      <button class="tool-tab" data-panel="caloriePanel">Calorie Calculator</button>
+    </div>
+
+    <div id="bmiPanel" class="tool-panel is-active reveal">
+      <form id="bmiForm">
+        <div class="form-row">
+          <div class="form-field"><label for="bmiHeight">Height (cm)</label><input id="bmiHeight" name="height" type="number" min="100" max="230" placeholder="170" required></div>
+          <div class="form-field"><label for="bmiWeight">Weight (kg)</label><input id="bmiWeight" name="weight" type="number" min="30" max="250" placeholder="65" required></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate BMI</button>
+      </form>
+      <div class="tool-result">
+        <div class="tool-result__value" id="bmiValue">—</div>
+        <div class="tool-result__label">Body Mass Index</div>
+        <div class="tool-result__category" id="bmiCategoryWrap" hidden><span id="bmiCategory"></span></div>
+      </div>
+    </div>
+
+    <div id="caloriePanel" class="tool-panel reveal">
+      <form id="calorieForm">
+        <div class="form-row">
+          <div class="form-field"><label for="calAge">Age</label><input id="calAge" name="age" type="number" min="14" max="100" placeholder="32" required></div>
+          <div class="form-field"><label for="calSex">Sex</label><select id="calSex" name="sex"><option value="female">Female</option><option value="male">Male</option></select></div>
+        </div>
+        <div class="form-row">
+          <div class="form-field"><label for="calHeight">Height (cm)</label><input id="calHeight" name="height" type="number" min="100" max="230" placeholder="170" required></div>
+          <div class="form-field"><label for="calWeight">Weight (kg)</label><input id="calWeight" name="weight" type="number" min="30" max="250" placeholder="65" required></div>
+        </div>
+        <div class="form-field"><label for="calActivity">Activity level</label>
+          <select id="calActivity" name="activity">
+            <option value="sedentary">Sedentary (little exercise)</option>
+            <option value="light">Light (1-3 days/week)</option>
+            <option value="moderate">Moderate (3-5 days/week)</option>
+            <option value="active">Active (6-7 days/week)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate Calories</button>
+      </form>
+      <div class="tool-result">
+        <div class="tool-result__value" id="calorieValue">—</div>
+        <div class="tool-result__label" id="calorieLabel">Estimated calories / day to maintain weight</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--paper-dim);">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div><h2>Ready to build a plan?</h2><p>These numbers are a starting point — a dietitian turns them into something usable.</p><div style="margin-top:1.6rem;"><a href="program-nutrition.html" class="btn btn-primary">See the Nutrition program</a></div></div>
+      <div><p style="color:var(--pine-dim); font-size:0.92rem;">These estimates are for general information only and don't replace medical advice. Talk to a physician for anything beyond a starting baseline.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__top">
+    <div class="footer__brand-col">
+      <div class="footer__brand">Meridian</div>
+      <p class="footer__about">One continuous practice for movement, breath, nourishment and clinical care — six studios, one file on you.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v7h3v-7h2.2l.8-3H14v-2a1 1 0 0 1 1-1h2V8Z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 10.5v3l3-1.5-3-1.5Z"/></svg></a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <ul class="footer__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="events.html">Events</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Resources</h4>
+      <ul class="footer__links">
+        <li><a href="resources.html">Guides & Articles</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tools.html">Health Tools</a></li>
+        <li><a href="pricing.html">Membership</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Visit</h4>
+      <ul class="footer__links">
+        <li>128 Birchwood Ave</li>
+        <li>Open daily, 6am – 9pm</li>
+        <li>hello@meridianwellness.co</li>
+        <li>(555) 019-2244</li>
+        <li><a href="contact.html">Get in touch →</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer__bottom">
+    <span>© <span data-year></span> Meridian Wellness. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<script src="js/navbar.js"></script>
+<script src="js/darkmode.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bmi.js"></script>
+<script src="js/calculator.js"></script>
+</body>
+</html>

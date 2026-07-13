@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sunrise-breathwork",
+    "title": "Sunrise Breathwork",
+    "date": "2026-07-14",
+    "time": "6:00am",
+    "location": "Studio A",
+    "description": "A 45-minute guided breathwork session to open the week."
+  },
+  {
+    "id": "nutrition-workshop",
+    "title": "Eating for Recovery Workshop",
+    "date": "2026-07-21",
+    "time": "5:30pm",
+    "location": "Studio C",
+    "description": "Registered dietitians walk through recovery-focused meal planning."
+  },
+  {
+    "id": "community-5k",
+    "title": "Meridian Community 5K",
+    "date": "2026-08-02",
+    "time": "8:00am",
+    "location": "Birchwood Park",
+    "description": "A casual, all-levels run finishing with a group stretch and breakfast."
+  }
+]

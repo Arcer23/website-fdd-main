@@ -1,0 +1,246 @@
+/* =========================================================
+   MERIDIAN WELLNESS — CORE STYLE SYSTEM
+   Design language: the body's own rhythms (breath, pulse,
+   the in/out of a single continuous line) run through every
+   page as connective tissue between fitness, yoga, meditation,
+   nutrition and clinical care.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  /* ---- Color tokens ---- */
+  --paper: #f4f1e9; /* warm bone background */
+  --paper-dim: #ece7db; /* recessed panels */
+  --ink: #1b2420; /* near-black green-ink text */
+  --pine: #2f4a3c; /* primary deep green */
+  --pine-dim: #3e5e4d;
+  --sage: #8fa888; /* secondary muted green */
+  --gold: #c79a4b; /* single warm accent — pulse/CTA */
+  --gold-dim: #e7d3a6;
+  --line: rgba(27, 36, 32, 0.12);
+  --line-strong: rgba(27, 36, 32, 0.22);
+
+  /* ---- Type ---- */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Space Mono", "Courier New", monospace;
+
+  /* ---- Scale ---- */
+  --step-eyebrow: 0.72rem;
+  --step-body: 1rem;
+  --step-lead: 1.25rem;
+  --step-h3: clamp(1.4rem, 1.1rem + 1.2vw, 2rem);
+  --step-h2: clamp(2rem, 1.5rem + 2vw, 3.2rem);
+  --step-h1: clamp(2.6rem, 1.6rem + 4vw, 5rem);
+
+  /* ---- Layout ---- */
+  --wrap: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --radius-s: 4px;
+  --radius-m: 10px;
+  --radius-l: 28px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---- Reset ---- */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--step-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.08;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+p {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Layout helpers ---- */
+.wrap {
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+section {
+  position: relative;
+}
+.section-pad {
+  padding-block: clamp(4rem, 8vw, 7.5rem);
+}
+
+/* ---- Eyebrow / label ---- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-mono);
+  font-size: var(--step-eyebrow);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pine-dim);
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition:
+    transform 0.35s var(--ease),
+    background 0.3s var(--ease),
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+  white-space: nowrap;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn-primary {
+  background: var(--pine);
+  color: var(--paper);
+}
+.btn-primary:hover {
+  background: var(--ink);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--pine);
+  background: var(--paper-dim);
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--ink);
+}
+.btn-gold:hover {
+  background: #b98a3d;
+}
+
+/* ---- Cards ---- */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  transition:
+    transform 0.4s var(--ease),
+    box-shadow 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--line-strong);
+  box-shadow: 0 24px 48px -24px rgba(27, 36, 32, 0.25);
+}
+
+/* ---- Pulse line signature (SVG threaded through pages) ---- */
+.pulse-line {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.pulse-line path {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: draw-breath 2.6s var(--ease) forwards;
+}
+@keyframes draw-breath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ---- Reveal-on-scroll ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s var(--ease),
+    transform 0.8s var(--ease);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Focus visibility ---- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Selection ---- */
+::selection {
+  background: var(--gold-dim);
+  color: var(--ink);
+}

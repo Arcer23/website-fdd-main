@@ -1,0 +1,3 @@
+/* Contact page tweaks live mostly in pages.css (.contact-grid, .form-field) */
+.contact-hours td { padding: 0.4rem 0; font-size: 0.9rem; }
+.contact-hours td:first-child { color: var(--pine-dim); padding-right: 1.5rem; }

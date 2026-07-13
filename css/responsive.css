@@ -1,0 +1,20 @@
+/* =========== GLOBAL RESPONSIVE RULES =========== */
+
+@media (max-width: 860px) {
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer__brand-col { grid-column: 1 / -1; }
+}
+
+@media (max-width: 600px) {
+  .footer__top { grid-template-columns: 1fr; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; }
+  .section-head { flex-direction: column; align-items: flex-start; }
+  .section-pad { padding-block: 3.5rem; }
+}
+
+@media (max-width: 420px) {
+  :root { --gutter: 1.1rem; }
+  .btn { padding: 0.8rem 1.3rem; font-size: 0.88rem; }
+}

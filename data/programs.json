@@ -1,0 +1,30 @@
+[
+  {
+    "id": "strength-fitness",
+    "title": "Strength & Fitness",
+    "description": "Small-group and one-on-one training built around mobility and long-term joint health.",
+    "icon": "assets/icons/strength.svg",
+    "schedule": ["Mon 6:30am", "Wed 6:30am", "Fri 7:00am"]
+  },
+  {
+    "id": "yoga-flow",
+    "title": "Yoga & Flow",
+    "description": "Vinyasa, restorative and prenatal classes across three studios, morning through evening.",
+    "icon": "assets/icons/yoga.svg",
+    "schedule": ["Daily 7:00am", "Daily 6:00pm"]
+  },
+  {
+    "id": "meditation",
+    "title": "Meditation",
+    "description": "Guided breathwork and stillness practice, in-studio or streamed to your morning routine.",
+    "icon": "assets/icons/meditation.svg",
+    "schedule": ["Daily 6:00am", "Daily 8:00pm"]
+  },
+  {
+    "id": "nutrition",
+    "title": "Nutrition",
+    "description": "One-on-one plans with registered dietitians, coordinated directly with your physician.",
+    "icon": "assets/icons/nutrition.svg",
+    "schedule": ["By appointment"]
+  }
+]
