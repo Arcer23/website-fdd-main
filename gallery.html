@@ -1,140 +1,330 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery — Meridian Wellness</title>
-<meta name="description" content="Photos from inside Meridian Wellness's studios.">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/navbar.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/pages.css">
-<link rel="stylesheet" href="css/gallery.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery — Meridian Wellness</title>
+    <meta
+      name="description"
+      content="Photos from inside Meridian Wellness's studios."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="wrap navbar__inner">
+        <a href="index.html" class="navbar__brand">
+          <svg
+            class="mark"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 16H9L12 6L18 26L21 16H30"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Meridian
+        </a>
 
-<header class="navbar">
-  <div class="wrap navbar__inner">
-    <a href="index.html" class="navbar__brand">
-      <svg class="mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 16H9L12 6L18 26L21 16H30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Meridian
-    </a>
+        <nav class="navbar__links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="programs.html">Programs</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="resources.html">Resources</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
 
-    <nav class="navbar__links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="programs.html">Programs</a>
-      <a href="services.html">Services</a>
-      <a href="events.html">Events</a>
-      <a href="resources.html">Resources</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="navbar__actions">
-      <button class="theme-toggle" aria-label="Toggle dark mode">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-      </button>
-      <a href="contact.html" class="btn btn-primary">Book a session</a>
-      <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('is-open')">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 4h16M1 9h16M1 14h16"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-<main>
-
-<section class="page-hero">
-  <div class="wrap">
-    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Gallery</span></div>
-    <p class="eyebrow">Gallery</p>
-    <h1 class="page-hero__title">A look inside the studios.</h1>
-    <p class="page-hero__lead gallery-hero-note">Click any image to view larger. Photography is placeholder — swap in real studio photos under <code>assets/images/gallery/</code>.</p>
-  </div>
-</section>
-
-<section class="section-pad">
-  <div class="wrap">
-    <div class="gallery-grid">
-      <div class="gallery-item reveal"><div class="ph" style="height:260px; background:linear-gradient(135deg,var(--sage),var(--pine));"></div><span class="gallery-item__label">Strength studio</span></div>
-      <div class="gallery-item reveal"><div class="ph" style="height:340px; background:linear-gradient(135deg,var(--gold-dim),var(--gold));"></div><span class="gallery-item__label">Yoga room</span></div>
-      <div class="gallery-item reveal"><div class="ph" style="height:220px; background:linear-gradient(135deg,var(--pine-dim),var(--ink));"></div><span class="gallery-item__label">Meditation corner</span></div>
-      <div class="gallery-item reveal"><div class="ph" style="height:300px; background:linear-gradient(135deg,var(--sage),var(--gold));"></div><span class="gallery-item__label">Nutrition kitchen</span></div>
-      <div class="gallery-item reveal"><div class="ph" style="height:240px; background:linear-gradient(135deg,var(--gold),var(--pine));"></div><span class="gallery-item__label">Consultation room</span></div>
-      <div class="gallery-item reveal"><div class="ph" style="height:320px; background:linear-gradient(135deg,var(--pine-dim),var(--sage));"></div><span class="gallery-item__label">Community 5K</span></div>
-      <div class="gallery-item reveal"><div class="ph" style="height:260px; background:linear-gradient(135deg,var(--ink),var(--sage));"></div><span class="gallery-item__label">Group class</span></div>
-      <div class="gallery-item reveal"><div class="ph" style="height:280px; background:linear-gradient(135deg,var(--gold-dim),var(--pine));"></div><span class="gallery-item__label">Front desk</span></div>
-      <div class="gallery-item reveal"><div class="ph" style="height:230px; background:linear-gradient(135deg,var(--sage),var(--ink));"></div><span class="gallery-item__label">Recovery lounge</span></div>
-    </div>
-  </div>
-</section>
-
-<div class="lightbox">
-  <button class="lightbox__close" aria-label="Close">
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 2l14 14M16 2 2 16"/></svg>
-  </button>
-  <div class="lightbox__frame"></div>
-</div>
-
-</main>
-
-<footer class="footer">
-  <div class="wrap footer__top">
-    <div class="footer__brand-col">
-      <div class="footer__brand">Meridian</div>
-      <p class="footer__about">One continuous practice for movement, breath, nourishment and clinical care — six studios, one file on you.</p>
-      <div class="footer__social">
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v7h3v-7h2.2l.8-3H14v-2a1 1 0 0 1 1-1h2V8Z"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 10.5v3l3-1.5-3-1.5Z"/></svg></a>
+        <div class="navbar__actions">
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+          <a href="contact.html" class="btn btn-primary">Book a session</a>
+          <button
+            class="navbar__toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            onclick="
+              document.getElementById('navLinks').classList.toggle('is-open')
+            "
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M1 4h16M1 9h16M1 14h16" />
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="wrap">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a><span>/</span
+            ><span aria-current="page">Gallery</span>
+          </div>
+          <p class="eyebrow">Gallery</p>
+          <h1 class="page-hero__title">A look inside the studios.</h1>
+          <p class="page-hero__lead gallery-hero-note">
+            Click any image to view larger. Photography is placeholder — swap in
+            real studio photos under.
+          </p>
+        </div>
+      </section>
 
-    <div>
-      <h4>Explore</h4>
-      <ul class="footer__links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="events.html">Events</a></li>
-      </ul>
-    </div>
+      <section class="section-pad">
+        <div class="wrap">
+          <div class="gallery-grid">
+            <div class="gallery-item reveal">
+                <img src="https://i.pinimg.com/1200x/4c/29/b6/4c29b6f0f450c564231cfa8fa312f070.jpg"/>
+              <div
+                class="ph"
+                style="
+                  
+                  background: linear-gradient(135deg, var(--sage), var(--pine));
+                "
+              ></div>
+              <span class="gallery-item__label">Strength studio</span>
+            </div>
+            <div class="gallery-item reveal">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f3/71/95/yoga-studio-on-6th-floor.jpg?w=1200&h=1200&s=1"/>
+              <div
+                class="ph"
+                style="
+                  
+                  background: linear-gradient(
+                    135deg,
+                    var(--gold-dim),
+                    var(--gold)
+                  );
+                "
+              >
+            </div>
+              <span class="gallery-item__label">Yoga room</span>
+            </div>
+            <div class="gallery-item reveal">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFPrkgIoHEeHE9txq9iuK1WCsPO_A5GEv4GsgUcbDXw&s=10"/>
+              <div
+                class="ph"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--pine-dim),
+                    var(--ink)
+                  );
+                "
+              ></div>
+              <span class="gallery-item__label">Meditation corner</span>
+            </div>
+            <div class="gallery-item reveal">
+             
+              <div
+                class="ph"
+                style="
+                  background: linear-gradient(135deg, var(--sage), var(--gold));
+                "
+              ></div>
+              <span class="gallery-item__label">Nutrition kitchen</span>
+            </div>
+            <div class="gallery-item reveal">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxvduMnIPyBdzC2QWC0Yi7xF4w5RDFVxPmJXXNAedpZbkvfrjqXKd_ammd&s=10"/>
+              <div
+                class="ph"
+                style="
+            
+                  background: linear-gradient(135deg, var(--gold), var(--pine));
+                "
+              ></div>
+              <span class="gallery-item__label">Consultation room</span>
+            </div>
+            <div class="gallery-item reveal">
 
-    <div>
-      <h4>Resources</h4>
-      <ul class="footer__links">
-        <li><a href="resources.html">Guides & Articles</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="tools.html">Health Tools</a></li>
-        <li><a href="pricing.html">Membership</a></li>
-        <li><a href="faq.html">FAQs</a></li>
-      </ul>
-    </div>
+              <div
+                class="ph"
+                style="
+                
+                  background: linear-gradient(
+                    135deg,
+                    var(--pine-dim),
+                    var(--sage)
+                  );
+                "
+              ></div>
+              <span class="gallery-item__label">Community 5K</span>
+            </div>
+            <div class="gallery-item reveal">
+              <img src="https://www.teachhub.com/wp-content/uploads/2020/09/Sept-9-Benefits-of-Group-Work_web.jpg"/>
+              <div
+                class="ph"
+                style="
+                  
+                  background: linear-gradient(135deg, var(--ink), var(--sage));
+                "
+              ></div>
+              <span class="gallery-item__label">Group class</span>
+            </div>
+            <div class="gallery-item reveal">
+              <img src="https://digitalguest.com/wp-content/uploads/2024/01/hotel-reception-is-the-face-of-hospitality-1024x683.webp"/>
+              <div
+                class="ph"
+                style="
+                  
+                  background: linear-gradient(
+                    135deg,
+                    var(--gold-dim),
+                    var(--pine)
+                  );
+                "
+              ></div>
+              <span class="gallery-item__label">Front desk</span>
+            </div>
+            <div class="gallery-item reveal">
+              <img src="https://www.thriverecoverylounge.com/images/freehold/DSC03184-HDR.jpg"/>
+              <div
+                class="ph"
+                style="
+                  
+                  background: linear-gradient(135deg, var(--sage), var(--ink));
+                "
+              ></div>
+              <span class="gallery-item__label">Recovery lounge</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <div>
-      <h4>Visit</h4>
-      <ul class="footer__links">
-        <li>128 Birchwood Ave</li>
-        <li>Open daily, 6am – 9pm</li>
-        <li>hello@meridianwellness.co</li>
-        <li>(555) 019-2244</li>
-        <li><a href="contact.html">Get in touch →</a></li>
-      </ul>
-    </div>
-  </div>
+      <div class="lightbox">
+        <button class="lightbox__close" aria-label="Close">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path d="M2 2l14 14M16 2 2 16" />
+          </svg>
+        </button>
+        <div class="lightbox__frame"></div>
+      </div>
+    </main>
 
-  <div class="wrap footer__bottom">
-    <span>© <span data-year></span> Meridian Wellness. All rights reserved.</span>
-    <span>Privacy Policy · Terms of Service</span>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="wrap footer__top">
+        <div class="footer__brand-col">
+          <div class="footer__brand">Meridian</div>
+          <p class="footer__about">
+            One continuous practice for movement, breath, nourishment and
+            clinical care — six studios, one file on you.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" /></svg
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path
+                  d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v7h3v-7h2.2l.8-3H14v-2a1 1 0 0 1 1-1h2V8Z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="YouTube"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect x="3" y="6" width="18" height="12" rx="3" />
+                <path d="M11 10.5v3l3-1.5-3-1.5Z" /></svg
+            ></a>
+          </div>
+        </div>
 
-<script src="js/navbar.js"></script>
-<script src="js/darkmode.js"></script>
-<script src="js/main.js"></script>
-<script src="js/events.js"></script>
-</body>
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer__links">
+            <li><a href="resources.html">Guides & Articles</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="tools.html">Health Tools</a></li>
+            <li><a href="pricing.html">Membership</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+
+       <div>
+          <h4>Visit</h4>
+          <ul class="footer__links">
+            <li>Maitidevi, Kathmandu</li>
+            <li>Open daily, 6am – 9pm</li>
+            <li>meridian.co</li>
+            <li>+977 9801926620</li>
+            <li><a href="contact.html">Get in touch →</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+      <div class="wrap footer__bottom">
+        <span
+          >© <span data-year></span> Meridian Wellness. All rights
+          reserved.</span
+        >
+        <span>Privacy Policy · Terms of Service</span>
+      </div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+  </body>
 </html>

@@ -35,7 +35,7 @@
       if (!field) return;
       const result = validators[name](field.value);
       if (result !== true) {
-        showError(field, result);
+        showError(true)
         valid = false;
       } else {
         clearError(field);
